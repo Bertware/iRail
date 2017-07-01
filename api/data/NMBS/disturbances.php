@@ -69,7 +69,7 @@ class disturbances
             $disturbance->description = trim((String) $item->description, "\r\n ");
 
             // Trim the description from any html
-            $disturbance->description = preg_replace('/<.*?>/', '', $disturbance->description);
+            $disturbance->description = preg_replace('/<(.|\s)*?>/', '', $disturbance->description);
 
             $disturbance->link = trim((String) $item->link, "\r\n ");
 
